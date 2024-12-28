@@ -3,6 +3,7 @@
 :root {
     --primery-background-color: #FFFFFF;
     --hero-background-color: #2E2F42;
+    --hero-title-color: #ffffff;
     --footer-background-color: #2E2F42;
     --primery-font-family: Roboto, sans-serif;
     --primery-text-color: #2E2F42;
@@ -65,7 +66,7 @@ p {
 }
 
 .container {
-    width: 1158px;
+    width: 1230px;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
@@ -157,15 +158,21 @@ p {
 /* Hero */
 /* Поставили по центру заголовок та кнопку секції Hero */
 .hero {
+    max-width: 1440px;
+    height: 515px;
     text-align: center;
     padding-bottom: 188px;
     padding-top: 188px;
 
-    outline: 1px solid tomato;
+    background-color: #2E2F42B2;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero_img.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .hero-title {
-    color: tomato;
+    color: var(--button-text-color);
 
     font-size: 56px;
     font-weight: 700;
