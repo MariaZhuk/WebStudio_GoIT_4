@@ -1,0 +1,375 @@
+/* Custom Properties */
+
+:root {
+    --primery-background-color: #FFFFFF;
+    --hero-background-color: #2E2F42;
+    --footer-background-color: #2E2F42;
+    --primery-font-family: Roboto, sans-serif;
+    --primery-text-color: #2E2F42;
+    --secondary-text-color: #434455;
+    --button-text-color: #ffffff;
+    --footer-text-color: #E7E9FC;
+    --footer-logo-color: #F4F4FD;
+    --button-potfolio-text: #4D5AE5;
+    --button-potfolio-text-accent: #FFFFFF;
+    --primery-text-size: 16px;
+    --primery-line-height: 1.5;
+    --accent-color: #404BBF;
+    --nav-logo-color: #4D5AE5;
+    --button-color: #4D5AE5;
+    --button-color-accent: #404BBF;
+    --button-border-color-portfolio: #E7E9FC;
+    --preimery-letter-spacing: 0.02em;
+    --portfolio-background-button-color: #F4F4FD;
+    --portfolio-background-button-color-accent: #404BBF;
+}
+
+.page {
+    font-family: var(--primery-font-family);
+    font-size: var(--primery-text-size);
+    color: var(--primery-text-color);
+    line-height: var(--primery-line-height);
+    background-color: var(--primery-background-color);
+    letter-spacing: var(--preimery-letter-spacing);
+}
+
+img {
+    display: block;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    width: 1158px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.section-padding {
+    padding-bottom: 120px;
+    padding-top: 120px;
+}
+
+.button {
+    border: 1px solid transparent;
+}
+
+/* Header */
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    font-family: Raleway, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.17;
+    color: inherit;
+}
+
+.color-logo {
+    color: var(--nav-logo-color);
+}
+
+.nav-list {
+    display: flex;
+    margin-left: 76px;
+}
+
+.nav-item {
+    font-weight: 500;
+}
+
+.nav-item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.nav-item:hover,
+.nav-item:focus {
+    color: var(--accent-color);
+}
+
+.nav-item>.current {
+    color: var(--accent-color);
+}
+
+.nav-link {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    color: inherit;
+}
+
+.contacts-list {
+    display: flex;
+    margin-left: auto;
+}
+
+.contacts-item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+    color: var(--accent-color);
+}
+
+.contacts-link {
+    padding-bottom: 24px;
+    padding-top: 24px;
+
+    color: var(--secondary-text-color);
+}
+
+/* Hero */
+/* Поставили по центру заголовок та кнопку секції Hero */
+.hero {
+    text-align: center;
+    padding-bottom: 188px;
+    padding-top: 188px;
+
+    outline: 1px solid tomato;
+}
+
+.hero-title {
+    color: tomato;
+
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.07;
+
+    margin-bottom: 48px;
+}
+
+.hero-button {
+    color: var(--button-text-color);
+    background-color: var(--button-color);
+    font-weight: 500;
+
+    padding: 16px 32px;
+    border-radius: 4px;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+    background-color: var(--button-color-accent);
+}
+
+/*  advantages*/
+.advantages {
+    outline: 1px solid teal;
+}
+
+.advantages-list {
+    display: flex;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    text-align: center;
+
+    margin-bottom: 72px;
+}
+
+.advantages-item:not(:last-child) {
+    margin-right: 24px;
+}
+
+.advantages-item-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+
+    margin-bottom: 8px;
+}
+
+.advantages-item-text {
+    color: var(--secondary-text-color);
+}
+
+/* Works */
+.works {
+    padding-bottom: 120px;
+
+    outline: 1px solid red;
+}
+
+/* Team */
+.team {
+    outline: 1px solid peru;
+}
+
+.team-list {
+    display: flex;
+}
+
+.team-item+.team-item {
+    margin-left: 24px;
+}
+
+.team-foto {
+    margin-bottom: 32px;
+}
+
+.team-list-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+
+    margin-bottom: 8px;
+}
+
+.team-list-text {
+    margin-bottom: 32px;
+
+    color: var(--secondary-text-color);
+    text-align: center;
+}
+
+/* Works */
+.works-flex {
+    display: flex;
+}
+
+.works-item+.works-item {
+    margin-left: 24px;
+}
+
+/* Footer */
+
+.footer {
+    background-color: var(--footer-background-color);
+}
+
+.footer-padding {
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+.logo-margin {
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.logo-footer {
+    color: var(--footer-logo-color);
+}
+
+.footer-text {
+    color: var(--footer-text-color);
+}
+
+/* PORTFOLIO */
+
+.filter {
+    padding-top: 96px;
+    padding-bottom: 72px;
+
+    text-align: center;
+}
+
+.filter-list {
+    display: flex;
+    justify-content: center;
+}
+
+.filter-item+.filter-item {
+    margin-left: 24px;
+}
+
+.filter-button {
+    color: var(--button-potfolio-text);
+    background-color: var(--portfolio-background-button-color);
+
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-align: center;
+
+    padding: 12px 24px;
+    border-radius: 4px;
+    border-color: var(--button-border-color-portfolio);
+}
+
+.filter-button:focus,
+.filter-button:hover {
+    color: var(--button-potfolio-text-accent);
+    background-color: var(--portfolio-background-button-color-accent);
+}
+
+
+.examples {
+    padding-bottom: 120px;
+}
+
+.examples-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: -12px;
+}
+
+.examples-item {
+    margin: 12px 12px;
+}
+
+.examples-link {
+    color: inherit;
+}
+
+.examples-foto {
+    margin-bottom: 32px;
+}
+
+.examples-title {
+    margin-bottom: 8px;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.examples-text {
+    margin-bottom: 32px;
+
+    color: var(--secondary-text-color);
+
+}
