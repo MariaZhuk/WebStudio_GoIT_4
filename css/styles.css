@@ -23,6 +23,12 @@
     --preimery-letter-spacing: 0.02em;
     --portfolio-background-button-color: #F4F4FD;
     --portfolio-background-button-color-accent: #404BBF;
+    --footer-social-icon-hover-bgc: #31D0AA;
+    --team-social-icon-bgc: #4D5AE5;
+    --team-social-icon-hover-bgc: #404BBF;
+    --social-icon-color: #F4F4FD;
+    --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+    --time-transition: 250ms
 }
 
 .page {
@@ -83,6 +89,10 @@ p {
 
 /* Header */
 
+.header {
+    border-bottom: 1px solid #E7E9FC;
+}
+
 .nav {
     display: flex;
     align-items: center;
@@ -90,9 +100,6 @@ p {
 }
 
 .nav-logo {
-    padding-top: 24px;
-    padding-bottom: 24px;
-
     font-family: Raleway, sans-serif;
     font-size: 18px;
     font-weight: 800;
@@ -112,6 +119,8 @@ p {
 .nav-item {
     font-weight: 500;
 }
+
+
 
 .nav-item:not(:last-child) {
     margin-right: 40px;
@@ -134,6 +143,19 @@ p {
     color: inherit;
 }
 
+.nav-link.current::after {
+    content: '';
+    display: block;
+    width: 100%;
+    position: relative;
+    top: 25px;
+    height: 4px;
+    border-radius: 2px;
+
+    background-color: var(--accent-color);
+
+}
+
 .contacts-list {
     display: flex;
     margin-left: auto;
@@ -147,6 +169,7 @@ p {
 .contacts-link:focus {
     color: var(--accent-color);
 }
+
 
 .contacts-link {
     padding-bottom: 24px;
@@ -196,10 +219,6 @@ p {
 }
 
 /*  advantages*/
-.advantages {
-    outline: 1px solid teal;
-}
-
 .advantages-list {
     display: flex;
 }
@@ -211,6 +230,41 @@ p {
     text-align: center;
 
     margin-bottom: 72px;
+}
+
+.advantages-item::before {
+    content: '';
+    display: inline-flex;
+    width: 264px;
+    height: 112px;
+    margin-bottom: 8px;
+    padding: 24px 100px;
+
+    background-color: #F4F4FD;
+}
+
+.advantages-item:nth-child(1)::before {
+    background-image: url(../images/strategy.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.advantages-item:nth-child(2)::before {
+    background-image: url(../images/clock.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon-diligens::before {
+    background-image: url(../images/diagram.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.advantages-item:last-child::before {
+    background-image: url(../images/astronaut.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .advantages-item:not(:last-child) {
@@ -232,17 +286,20 @@ p {
 /* Works */
 .works {
     padding-bottom: 120px;
-
-    outline: 1px solid red;
 }
 
 /* Team */
 .team {
-    outline: 1px solid peru;
+    background-color: #F4F4FD;
+
 }
 
 .team-list {
     display: flex;
+}
+
+.team-item {
+    box-shadow: 0px 2px 1px 0px #2E2F4214, 0px 1px 1px 0px #2E2F4229, 0px 1px 6px 0px #2E2F4214;
 }
 
 .team-item+.team-item {
@@ -263,10 +320,47 @@ p {
 }
 
 .team-list-text {
-    margin-bottom: 32px;
+    margin-bottom: 8px;
 
     color: var(--secondary-text-color);
     text-align: center;
+}
+
+.social-media-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.social-media-item {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--team-social-icon-bgc);
+
+}
+
+.social-media-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: var(--social-icon-color);
+}
+
+.social-media-item+.social-media-item {
+    margin-left: 24px;
+}
+
+.team-socia-media-item:hover,
+.team-socia-media-item:hover {
+    background-color: var(--team-social-icon-hover-bgc);
+}
+
+.team-icon {
+    fill: currentColor;
 }
 
 /* Works */
@@ -276,6 +370,46 @@ p {
 
 .works-item+.works-item {
     margin-left: 24px;
+}
+
+/* Customers */
+
+.customers-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customers-item {
+    width: 168px;
+    height: 88px;
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+}
+
+.customers-item+.customers-item {
+    margin-left: 24px;
+}
+
+.customers-item:hover {
+    border-color: var(--accent-color);
+}
+
+.customers-logo {
+    fill: currentColor;
+}
+
+.customers-item:hover .customers-logo {
+    fill: teal;
+}
+
+.customers-link {
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #8E8F99;
 }
 
 /* Footer */
@@ -289,6 +423,14 @@ p {
     padding-top: 100px;
 }
 
+.footer-container {
+    display: flex;
+}
+
+.footer-geometriy {
+    margin-right: 120px;
+}
+
 .logo-margin {
     display: inline-block;
     margin-bottom: 16px;
@@ -300,6 +442,24 @@ p {
 
 .footer-text {
     color: var(--footer-text-color);
+}
+
+.footer-list-title {
+    margin-bottom: 16px;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.footer-socia-media-item:hover,
+.footer-socia-media-item:focus {
+    background-color: var(--footer-social-icon-hover-bgc);
+}
+
+
+.footer-socia-media-item+.footer-socia-media-item {
+    margin-left: 24px;
 }
 
 /* PORTFOLIO */
@@ -356,6 +516,9 @@ p {
 
 .examples-item {
     margin: 12px 12px;
+    padding-bottom: 32px;
+
+    border: 1px solid #E7E9FC
 }
 
 .examples-link {
@@ -364,6 +527,10 @@ p {
 
 .examples-foto {
     margin-bottom: 32px;
+}
+
+.border-card {
+    padding-left: 16px;
 }
 
 .examples-title {
@@ -375,8 +542,45 @@ p {
 }
 
 .examples-text {
-    margin-bottom: 32px;
-
     color: var(--secondary-text-color);
 
+}
+
+
+/* Movecard */
+
+.thumb {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate(100%);
+    padding-top: 40px;
+    padding-right: 32px;
+    padding-left: 32px;
+    color: var(--social-icon-color);
+    background-color: #4D5AE5;
+
+    opacity: 0;
+
+}
+
+/* .thumb-text {
+    color: var(--social-icon-color);
+} */
+
+.examples-item:hover {
+    border: 1px solid #F4F4FD;
+    box-shadow: 0px 2px 1px 0px #2E2F4214, 0px 1px 1px 0px #2E2F4229, 0px 1px 6px 0px #2E2F4214;
+    transition: box-shadow var(--time-transition) var(--cubic);
+}
+
+.examples-item:hover .overlay {
+    opacity: 1;
+    transform: translate(0);
 }
