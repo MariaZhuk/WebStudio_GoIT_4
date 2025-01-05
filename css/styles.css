@@ -218,6 +218,36 @@ p {
     background-color: var(--button-color-accent);
 }
 
+/* Modal-womdow */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: #2E2F4266;
+
+}
+
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 408px;
+    min-height: 684px;
+
+    transform: translate(-50%, -50%);
+
+    background-color: #fff;
+
+}
+
 /*  advantages*/
 .advantages-list {
     display: flex;
@@ -516,7 +546,7 @@ p {
 
 .examples-item {
     margin: 12px 12px;
-    padding-bottom: 32px;
+
 
     border: 1px solid #E7E9FC
 }
@@ -525,12 +555,8 @@ p {
     color: inherit;
 }
 
-.examples-foto {
-    margin-bottom: 32px;
-}
-
 .border-card {
-    padding-left: 16px;
+    padding: 32px 16px;
 }
 
 .examples-title {
@@ -551,6 +577,7 @@ p {
 
 .thumb {
     position: relative;
+    overflow: hidden;
 }
 
 .overlay {
@@ -559,7 +586,7 @@ p {
     bottom: 0;
     width: 100%;
     height: 100%;
-    transform: translate(100%);
+    transform: translatey(100%);
     padding-top: 40px;
     padding-right: 32px;
     padding-left: 32px;
@@ -567,12 +594,13 @@ p {
     background-color: #4D5AE5;
 
     opacity: 0;
+    transition: transform var(--time-transition) var(--cubic);
 
 }
 
-/* .thumb-text {
+.thumb-text {
     color: var(--social-icon-color);
-} */
+}
 
 .examples-item:hover {
     border: 1px solid #F4F4FD;
@@ -580,7 +608,7 @@ p {
     transition: box-shadow var(--time-transition) var(--cubic);
 }
 
-.examples-item:hover .overlay {
+.examples-link:hover .overlay {
     opacity: 1;
-    transform: translate(0);
+    transform: translatey(0);
 }
